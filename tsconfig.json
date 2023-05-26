@@ -8,6 +8,7 @@
     "allowJs": true,
     "moduleResolution": "node",
     "baseUrl": ".",
+    "downlevelIteration": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "plugins": [
