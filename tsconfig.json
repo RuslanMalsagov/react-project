@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/", // куда производится сборка
+    "noImplicitAny": true, // подсвечивает места где не указан тип
+    "module": "es6",
+    "target": "es5", // в какую спецификацию компилируем: для поддержки браузеров
+    "jsx": "react-jsx",
+    // Компилятор будет обрабатывать не только TS файлы но и JS
+    "allowJs": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
