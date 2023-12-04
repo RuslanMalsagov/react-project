@@ -1,8 +1,11 @@
-@import url('./reset');
-@import url('./themes/dark');
-@import url('./themes/normal');
-@import url('./variables/global');
+@import url('./reset.scss');
+@import url('./themes/dark.scss');
+@import url('./themes/normal.scss');
+@import url('./variables/global.scss');
 
 .app {
-  font-size: 30px;
+  font: var(--font-l);
+  background: var(--bg-color);
+  color: var(--primary-color);
+  min-height: 100vh;
 }

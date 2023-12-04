@@ -1,13 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
-import './index.scss';
+import './styles/index.scss';
 import { Link } from 'react-router-dom';
 import { AboutPageAsync } from './pages/aboutPage/AboutPage.async';
 import { MainPageAsync } from './pages/mainPage/MainPage.async';
-import { Suspense } from 'react';
+import { Suspense, useContext, useState } from 'react';
+import { Theme, ThemeContext } from './theme/ThemeContext';
 
 const App = () => {
+  const { theme, setTheme } = useContext(ThemeContext);
+  const toogleTheme = () => {
+    setTheme(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK);
+  };
   return (
-    <div className='app'>
+    <div className={`app ${theme}`}>
+      <button onClick={toogleTheme}>Theme</button>
       <Link to={'/'}>Main</Link>
       <Link to={'/about'}>About</Link>
       <Suspense fallback={<div>Loading...</div>}>
