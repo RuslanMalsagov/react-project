@@ -5,8 +5,10 @@ import { AboutPageAsync } from './pages/aboutPage/AboutPage.async';
 import { MainPageAsync } from './pages/mainPage/MainPage.async';
 import { Suspense, useContext, useState } from 'react';
 import { Theme, ThemeContext } from './theme/ThemeContext';
+import { useTheme } from './theme/useTheme';
 
 const App = () => {
+  const { theme, toogleTheme } = useTheme();
   return (
     <div className={`app ${theme}`}>
       <button onClick={toogleTheme}>Theme</button>
