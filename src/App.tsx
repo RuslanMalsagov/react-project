@@ -7,10 +7,6 @@ import { Suspense, useContext, useState } from 'react';
 import { Theme, ThemeContext } from './theme/ThemeContext';
 
 const App = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
-  const toogleTheme = () => {
-    setTheme(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK);
-  };
   return (
     <div className={`app ${theme}`}>
       <button onClick={toogleTheme}>Theme</button>
