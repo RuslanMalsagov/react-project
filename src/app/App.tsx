@@ -1,16 +1,18 @@
-import { Route, Routes } from 'react-router-dom';
 import './styles/index.scss';
-import { Link } from 'react-router-dom';
 import { useTheme } from 'app/providers/themeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
 
 const App = () => {
   const { theme } = useTheme();
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar />
+      <div>
+        <Sidebar />
+      </div>
       <AppRouter />
     </div>
   );
