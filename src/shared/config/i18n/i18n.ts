@@ -11,7 +11,7 @@ i18n
   .use(initReactI18next)
   .init({
     // Язык по умолчанию
-    fallbackLng: 'ru',
+    fallbackLng: false,
     debug: __IS_DEV__, // debug будет работать только в dev режиме
 
     interpolation: {

@@ -20,5 +20,6 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
       // Присваиваем значение переменной isDev, и она теперь доступна в коде
       __IS_DEV__: JSON.stringify(isDev),
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ];
 }
