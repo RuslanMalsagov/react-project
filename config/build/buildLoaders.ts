@@ -49,8 +49,8 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
             auto: (resPath: string) => Boolean(resPath.includes('.module.')),
             /*
           В режиме разработки имена классов будут создавать по шаблону path][name]__[local
-          то есть будет указываться путь до файла, а в режиме разработки будет 
-          генерироваться только 
+          то есть будет указываться путь до файла, а в режиме разработки будет
+          генерироваться только
           */
             localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
           },
