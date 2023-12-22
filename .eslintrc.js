@@ -3,10 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
+  extends: ['plugin:react/recommended', 'airbnb'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -15,10 +12,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
     'import/no-unresolved': 'off',
@@ -34,6 +28,8 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     // no-underscore-dangle - нижнее подчеркивание
     'no-underscore-dangle': 'off',
+    // jsx-quotes-одинарные кавычки
+    'jsx-quotes': 'off',
   },
   globals: {
     __IS_DEV__: true,
