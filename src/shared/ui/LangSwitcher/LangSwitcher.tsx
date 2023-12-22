@@ -1,13 +1,12 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
-import cls from './LangSwitcher.module.scss';
 
 interface LangSwitcherProps {
   className?: string;
 }
 
-export const LangSwitcher = ({ className }:LangSwitcherProps) => {
+export const LangSwitcher = ({ className }: LangSwitcherProps) => {
   const { t, i18n } = useTranslation();
   const toggle = () => {
     i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
@@ -16,11 +15,7 @@ export const LangSwitcher = ({ className }:LangSwitcherProps) => {
   // t('Язык') = 'Язык' - это всего лишь ключ, а значение задается в файлк tanslation.json
   return (
     <div>
-      <Button
-        className={classNames(cls.langSwitcher, {}, [className])}
-        theme={ThemeButton.CLEAR}
-        onClick={toggle}
-      >
+      <Button className={classNames('', {}, [className])} theme={ThemeButton.CLEAR} onClick={toggle}>
         {t('Язык')}
       </Button>
     </div>

@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
     'import/no-unresolved': 'off',
@@ -30,6 +30,9 @@ module.exports = {
     'no-underscore-dangle': 'off',
     // jsx-quotes-одинарные кавычки
     'jsx-quotes': 'off',
+    // i18next/no-literal-string - будет ругать на отсутствие перевода только внутри JSX
+    'i18next/no-literal-string': [2, { markupOnly: true, ignoreAttribute: ['to'] }],
+    'react/jsx-wrap-multilines': ['error', { declaration: 'parens-new-line' }],
   },
   globals: {
     __IS_DEV__: true,
