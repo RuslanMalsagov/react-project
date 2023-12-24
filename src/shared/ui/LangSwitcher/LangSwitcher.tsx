@@ -15,7 +15,10 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
   // t('Язык') = 'Язык' - это всего лишь ключ, а значение задается в файлк tanslation.json
   return (
     <div>
-      <Button className={classNames('', {}, [className])} theme={ThemeButton.CLEAR} onClick={toggle}>
+      <Button
+        className={classNames('', {}, [className])}
+        theme={ThemeButton.CLEAR}
+        onClick={toggle}>
         {t('Язык')}
       </Button>
     </div>

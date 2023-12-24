@@ -15,7 +15,12 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+    'react/jsx-filename-extension': [
+      2,
+      {
+        extensions: ['.js', '.jsx', '.tsx'],
+      },
+    ],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'warn',
@@ -32,8 +37,16 @@ module.exports = {
     // jsx-quotes-одинарные кавычки
     'jsx-quotes': 'off',
     // i18next/no-literal-string - будет ругать на отсутствие перевода только внутри JSX
-    'i18next/no-literal-string': [2, { markupOnly: true, ignoreAttribute: ['to'] }],
+    'i18next/no-literal-string': [
+      2,
+      {
+        markupOnly: true,
+        ignoreAttribute: ['to'],
+      },
+    ],
     'react/jsx-wrap-multilines': ['error', { declaration: 'parens-new-line' }],
+    'max-len': ['error', { ignoreComments: true }],
+    'react/jsx-closing-bracket-location': ['error', 'after-props'],
   },
   globals: {
     __IS_DEV__: true,
