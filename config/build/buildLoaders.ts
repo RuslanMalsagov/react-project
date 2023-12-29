@@ -18,7 +18,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
   };
 
   const babelLoader = {
-    test: /\.(js|jsx|tsx)$/,
+    test: /\.(js|jsx|ts|tsx)$/,
     exclude: /node_modules/,
     use: {
       loader: 'babel-loader',
@@ -28,8 +28,10 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
           [
             'i18next-extract',
             {
-              locales: ['ru', 'en'],
-              keyAsDefaultValue: true,
+              locales: ['en', 'ru'],
+              keyAsDefaultValue: false,
+              saveMissing: true,
+              outputPath: 'public/locales/{{locale}}/{{ns}}.json',
             },
           ],
         ],
@@ -52,7 +54,9 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
           то есть будет указываться путь до файла, а в режиме разработки будет
           генерироваться только
           */
-            localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
+            localIdentName: isDev
+              ? '[path][name]__[local]--[hash:base64:5]'
+              : '[hash:base64:8]',
           },
         },
       },
