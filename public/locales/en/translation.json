@@ -1,9 +1,11 @@
 {
+  "Вброс ошибки": "Вброс ошибки",
   "Главная": "Main",
   "Меню": "Menu",
   "О сайте": "About",
   "Перевод": "Translate",
+  "Произошла непредвиденная ошибка": "An unexpected error has occurred",
+  "Обновить страницу":"Refresh the page",
   "Страница не найдена": "Page not found",
-  "Тестовый пример": "Test example",
   "Язык": "English"
 }

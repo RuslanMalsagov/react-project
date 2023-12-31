@@ -7,6 +7,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     open: true,
     // historyApiFallback "фиксит" - при обновлении страницы выдает ошибку cannot get
     historyApiFallback: true,
-    hot: true,
+    // hot: true,
   };
 }

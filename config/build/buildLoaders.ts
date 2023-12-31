@@ -76,7 +76,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     // порядок лоадеров важен!
     fileLoader,
     svgLoader,
-    babelLoader,
+    // babelLoader,
     typescriptLoader,
     cssLoader,
   ];

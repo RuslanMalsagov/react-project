@@ -5,7 +5,7 @@ import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 // import { useTranslation } from 'react-i18next';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 
 function App() {
   const { theme } = useTheme();
