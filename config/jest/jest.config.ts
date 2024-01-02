@@ -1,3 +1,5 @@
+import path from 'path';
+
 export default {
   clearMocks: true,
   testEnvironment: 'jsdom',
@@ -8,6 +10,12 @@ export default {
   modulePaths: ['<rootDir>src'],
   rootDir: '../../',
   setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+  moduleNameMapper: {
+    // Что-бы jest понимал scss и css файлы
+    '\\.s?css$': 'identity-obj-proxy',
+    // Что-бы jest понимал svg (расширение) компоненты
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+  },
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
