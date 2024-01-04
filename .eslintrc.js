@@ -41,7 +41,7 @@ module.exports = {
       2,
       {
         markupOnly: true,
-        ignoreAttribute: ['to'],
+        ignoreAttribute: ['to', 'data-testid'],
       },
     ],
     'react/jsx-wrap-multilines': ['error', { declaration: 'parens-new-line' }],
@@ -51,4 +51,16 @@ module.exports = {
   globals: {
     __IS_DEV__: true,
   },
+  // overrides - позволяет для определенного типа файлов переопределять какие то правила
+  overrides: [
+    {
+      // для этих файлов мы можем переопределять правила
+      // files: ['**/src/**/*.test.{ts, tsx}'],
+      files: ['*.test.ts', '*.test.tsx'],
+      // Мы отключаем след правило для тестовых файлов, потому что переводы нам в тестах не нужны))
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 };
