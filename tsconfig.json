@@ -1,9 +1,4 @@
 {
-  // "include": [
-  //   "./src/**/*.module.scss",
-  //   "./src/app/App.tsx",
-  //   ".eslintrc.js" // Добавьте путь к вашему .eslintrc.js
-  // ],
   "compilerOptions": {
     "outDir": "./dist/", // куда производится сборка
     "noImplicitAny": true, // подсвечивает места где не указан тип
