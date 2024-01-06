@@ -1,7 +1,7 @@
+@import url('./variables/global.scss');
 @import url('./reset.scss');
 @import url('./themes/dark.scss');
 @import url('./themes/normal.scss');
-@import url('./variables/global.scss');
 
 .app {
   font: var(--font-l);

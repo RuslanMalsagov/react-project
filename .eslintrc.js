@@ -45,7 +45,7 @@ module.exports = {
       },
     ],
     'react/jsx-wrap-multilines': ['error', { declaration: 'parens-new-line' }],
-    'max-len': ['error', { ignoreComments: true }],
+    'max-len': ['error', { ignoreComments: true }, { code: 100 }],
     'react/jsx-closing-bracket-location': ['error', 'after-props'],
   },
   globals: {
