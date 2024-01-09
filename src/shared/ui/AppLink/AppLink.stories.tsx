@@ -41,4 +41,5 @@ SecondaryDark.args = {
   children: 'Text',
   theme: AppLinkTheme.SECONDARY,
 };
+
 SecondaryDark.decorators = [ThemeDecorator(Theme.DARK)];
